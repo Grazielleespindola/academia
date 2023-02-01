@@ -1,0 +1,529 @@
+:root {
+    --primary: #101417;
+    --contrast: #B91F33;
+    --gray-light: #E1E1E1;
+    --gray-medium: #666666;
+}
+
+* {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    /*coloca o texto em maiúsculo*/
+}
+
+html {
+    scroll-behavior: smooth;
+    /*navegação em âncora ficar suave*/
+}
+
+#academia,
+#planos,
+#contato {
+    scroll-margin-top: 100px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary);
+}
+
+img {
+    /*retirando das imagens o padrão de texto*/
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h2,
+h3 {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    /*os títulos h1-h6 já vem com negrito/bold*/
+}
+
+h3 {
+    font-size: 32px;
+}
+
+p {
+    color: var(--gray-light);
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    /*padding-top: 16px;
+    padding-bottom: 16px;*/
+    padding: 16px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    /*faz com que o elemento posicionado fique por cima*/
+}
+
+.container {
+    /*background-color: blue;*/
+    width: 1140px;
+    margin: 0 auto;
+    /*centralizando o container*/
+}
+
+/*Formatando o container que está DENTRO do header*/
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    /*alinhando no eixo X*/
+    align-items: center;
+    /*alinhando no eixo Y*/
+}
+
+.menu a {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 110px;
+}
+
+/*ao passar o mouse nos links do menu*/
+.menu a:hover {
+    color: var(--contrast);
+}
+
+
+
+.hero-section {
+    width: 100%;
+    height: 650px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .container {
+    /*background-color: red;*/
+    position: relative;
+    /*posição em relação a ele mesmo*/
+    top: 52px;
+}
+
+.hero-section h1 {
+    max-width: 946px;
+    font-size: 96px;
+    color: var(--gray-light);
+    line-height: 90%;
+}
+
+.hero-section p {
+    font-size: 24px;
+    line-height: 120%;
+    color: var(--gray-light);
+    max-width: 655px;
+}
+
+
+.hero-section a {
+    color: #ffffff;
+    background-color: var(--contrast);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 13px 44px 9px 44px;
+    /*top right bottom left*/
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.nossa-academia {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+
+    column-gap: 24px;
+    /*espaço entre as colunas do flexbox*/
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.faca-parte {
+    background-color: var(--gray-light);
+    padding: 37px 0;
+}
+
+.faca-parte h2 {
+    color: #222222;
+}
+
+.faca-parte p {
+    color: var(--gray-medium);
+    max-width: 850px;
+    margin-bottom: 0;
+}
+
+.faca-parte .container {
+    /*Colocando position no container para ele servir de referência para a imagem do atleta*/
+    position: relative;
+
+}
+
+.imagem-atleta {
+    /*posição em relação ao elemento pai (desde que ele tenha position)
+    caso contrário, o body será usado como referência*/
+    position: absolute;
+    right: 0;
+    bottom: -37px;
+    /*valor do padding*/
+}
+
+.planos {
+    /*width: 100%;
+    height: auto;*/
+    background-image: url(../img/bg-planos.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.flex-cards {
+    display: flex;
+    column-gap: 24px;
+    /*espaço entre as colunas*/
+    /* justify-content: space-between;   */
+}
+
+.card-plano {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: solid 1px var(--gray-light);
+    padding: 30px;
+    /*margin-top: 30px;*/
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.card-plano:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.03);
+}
+
+.card-destaque {
+    border: solid 3px var(--contrast);
+}
+
+.card-destaque .preco {
+    color: #E0E34C;
+}
+
+.preco {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gray-light);
+}
+
+.card-plano ul {
+    text-align: left;
+    padding: 0;
+    list-style-position: inside;
+    /*marcador para dentro da lista*/
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--gray-light);
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 45px 7px 45px;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    transition: 0.5s;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    border: solid 2px var(--gray-light);
+}
+
+.btn-outline {
+    border: solid 2px var(--contrast);
+}
+
+.btn-fill {
+    background-color: var(--contrast);
+}
+
+.btn-block {
+    display: block;
+}
+
+
+.fale-conosco {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo-form {
+    width: 558px;
+}
+
+.conteudo-form form {
+    margin-top: 21px;
+}
+
+.conteudo-form input,
+.conteudo-form textarea {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 10px;
+    padding: 10px 10px 7px 10px;
+    /*top right bottom left*/
+    border: solid 1px var(--gray-light);
+    border-radius: 3px;
+    font-size: 18px;
+    color: var(--gray-light);
+    /*borda e padding (faz o elemento expandir)*/
+    box-sizing: border-box;
+    /*faz com que a borda e o paddin não modifique as dimensões do elemento*/
+}
+
+.conteudo-form textarea {
+    height: 140px;
+    resize: none;
+    /*desabilita o redimensionamento do textarea*/
+}
+
+
+::placeholder {
+    color: var(--gray-medium);
+}
+
+
+.footer {
+    background-color: var(--contrast);
+    color: white;
+    text-align: center;
+    padding: 15px 194px 10px 194px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.midias {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 100px;
+}
+
+
+
+/*
+    position: relative;
+    Posição em relação ao próprio elemento
+
+    Position: absolute;
+    Posição em relação ao elemento pai (desde que o elemento pai tenha position)
+    caso contrário, o body será usado como referência
+
+    Position: fixed;
+    Posição fixa em relação ao body
+*/
+
+@media (max-width: 1140px) {
+    /* Até 1140px */
+
+    .container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+        /*faz com que o padding/border não acrescenter valor as dimensões*/
+    }
+
+    .conteudo-faca-parte {
+        width: calc(100% - 195px);
+        /* Resultado da largura da div menos o valor da largura da imagem */
+    }
+
+    .fale-conosco {
+        flex-direction: column;
+        row-gap: 24px;
+        align-items: center;
+    }
+
+    .conteudo-form,
+    .mapa,
+    iframe {
+        width: 100%;
+    }
+
+    /* 
+    .mapa, iframe{
+        width: 100%;
+    } */
+}
+
+
+
+
+@media(max-width: 950px) {
+    /* Até 950px */
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .menu {
+        /*display: none; */
+        /* Não fuciona para fazer firula com o js*/
+        transform: translateX(-100%);
+        /* Fica escondido do lado esquerdo */
+        transition: 1s;
+        background-color: var(--contrast);
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 75%;
+        height: 100vh;
+        /* view height - Ocupa a altura toda da tela */
+        border-radius: 30px;
+    }
+
+
+
+    .menu-open {
+        /* CLasse adicionada pelo JS */
+        /* display: block;    */
+        /*   Também não funciona com firula js*/
+        transform: translateX(0);
+        /* Aparece de novo o menu */
+    }
+
+
+
+
+
+    .menu a {
+        /* background-color: var(--gray-medium) ; */
+        display: block;
+        margin: 0;
+        padding: 20px 15px;
+        text-align: center;
+
+    }
+
+    .menu a:hover {
+        background-color: var(--primary);
+    }
+
+    .bar {
+        /* As três barras com tela menor */
+        width: 40px;
+        height: 3px;
+        background-color: white;
+        margin: 3px;
+        transition: 0.5s;
+    }
+
+
+    .x .bar:first-child {               /* Primeira barra */
+         transform: rotate(45deg) translate(8px, 2px);                  /* Fazendo o cruzamento do x */
+    }
+
+    .x .bar:last-child {                /* última barra */
+        transform: rotate(-45deg) translate(6px, 0px);   
+    }
+
+
+    .x .bar:nth-child(2){
+        opacity: 0;                                 /* o x foi adicionado a classe 'menu' no JS, só é habiliado quando há o click  nth-child é para enumerar qual barra quero selecionar */
+        transform: translatex(-100px);               /* A barra vai rolar até o canto esquerdo. */                                           
+    }
+
+
+
+    .hero-section {
+        height: 520px;
+    }
+
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-section p {
+        font-size: 20px;
+    }
+
+
+    .nossa-academia {
+        flex-direction: column;
+        /* Para na segunda tela ficarem um embaixo do outro, sem utilizar o 
+                                            display block. Só pode usar esse comando porque lá em cima já está ativado o flexbox.
+                                            Alteraçao dos eixos justify-content e align-items se invertem */
+        row-gap: 24px;
+    }
+
+    .imagem-aluno img {
+        max-width: 100%;
+        /* Ela vai assumir seu tamanho original de 558px */
+    }
+
+
+    .flex-cards {
+        flex-direction: column;
+        /* Retirar os quadrados de lado a lado */
+        align-items: center;
+        row-gap: 24px;
+    }
+
+    .card-plano {
+        max-width: 400px;
+        /* Tamanho máximo que os quadrados irão se expandir */
+    }
+
+    .footer {
+        padding: 15px 15px 10px 15px;
+        /* Alterando a forma original do .footer */
+    }
+
+}
+
+
+
+
+@media(max-width: 560px) {
+
+    /* Até 560px */
+    .imagem-atleta {
+        display: none;
+    }
+
+
+    .conteudo-faca-parte {
+        width: 100%;
+        /* Retirando o media-query lá de cima e Refazendo o texto ocupar toda a largura novamente */
+    }
+
+}
