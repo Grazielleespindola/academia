@@ -103,15 +103,24 @@ p {
 }
 
 
-
 .hero-section {
     width: 100%;
     height: 650px;
-    background-image: url(../img/background.jpg);
+    /* background-image: url(../img/background.jpg); */             /* Retirei esse background e adicionei ao bg-1 */
     background-size: cover;
 
     display: flex;
     align-items: center;
+}
+
+
+.bg-1{
+    background-image: url(../img/background.jpg);
+}
+
+
+.bg-2{
+    background-image: url(../img/background-2.jpg);
 }
 
 .hero-section .container {
@@ -120,6 +129,16 @@ p {
     /*posição em relação a ele mesmo*/
     top: 52px;
 }
+
+.bx-wrapper{             /* Ao incluir os slides, fica uma borda branca e essa classe é inserida automáticamente por causa da biblioteca. Aqui estou negando isso. */
+    border: none;
+    box-shadow: none;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus{
+    background-color: blue;
+}
+
 
 .hero-section h1 {
     max-width: 946px;

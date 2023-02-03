@@ -21,3 +21,10 @@ btnMenu.addEventListener('click', function () {        //Associar o evento de cl
   btnMenu.classList.toggle('x');
 })
 
+
+menu.addEventListener('click', function () {    // Após o menu aberto, qualquer clique no menu faz ele ser fechado
+menu.classList.toggle('menu-open');       
+btnMenu.classList.toggle('x');
+})
+
+

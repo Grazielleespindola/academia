@@ -7,21 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia HardCore</title>
 
-    <link rel="stylesheet" href="css/aos.css">          <!--CSS do site https://michalsnik.github.io/aos/ para ANIMAÇÃO-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/aos.css"> <!--CSS do site https://michalsnik.github.io/aos/ para ANIMAÇÃO-->
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap" rel="stylesheet">
 
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.slider').bxSlider({
+                auto: true,                 /* slide passa sozinho*/
+                pause: 3000,                 /* Segundos para passar*/
+                // autoHover: true,            /* Se o mouse tiver em cima, ele não passa sozinho, ignora os segundos*/ 
+                controls: false,
+            });
+        });
+    </script>
+
 
 </head>
 
 <body>
     <!-- alt + shift + F -->
 
-    <div class="header">
+    <header class="header">
 
         <div class="container">
 
@@ -35,34 +52,59 @@
                 <div class="bar"></div>
             </div>
 
-            <div class="menu">
+            <nav class="menu">
                 <a href="#">Início</a>
                 <a href="#academia">Nossa Academia</a>
                 <a href="#planos">Planos</a>
                 <a href="#contato">Fale Conosco</a>
 
+            </nav>
+
+        </div>
+
+    </header> <!--fim do header-->
+
+
+
+    <div class="slider"> <!-- Após adicionar a biblioteca, insere essa div envolvendo onde quero racionar-->
+
+        <div class="hero-section bg-1">
+
+            <div class="container">
+
+                <h1>Lorem ipsum dolor s it amet, consectetur</h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas fringilla consectetur ligula ut ornare.
+                    Pellentesque vulputate dictum nibh eget tempus. Integer accumsan tellus sed massa faucibus, in
+                    eleifend
+                    lorem placerat.</p>
+
+                <a href="#">Lorem Ipsum</a>
             </div>
 
         </div>
 
-    </div> <!--fim do header-->
+        <div class="hero-section bg-2">
 
-    <div class="hero-section">
+            <div class="container">
 
-        <div class="container">
+                <h1>Conheça Unidade de Niterói</h1>
 
-            <h1 data-aos="fade-right">Lorem ipsum dolor s it amet, consectetur</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas fringilla consectetur ligula ut ornare.
+                    Pellentesque vulputate dictum nibh eget tempus. Integer accumsan tellus sed massa faucibus, in
+                    eleifend
+                    lorem placerat.</p>
 
-            <p data-aos="fade-right" data-aos-delay="300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur ligula ut ornare.
-                Pellentesque vulputate dictum nibh eget tempus. Integer accumsan tellus sed massa faucibus, in eleifend
-                lorem placerat.</p>
+                <a href="#">Lorem Ipsum</a>
+            </div>
 
-            <a data-aos="fade-right" data-aos-delay="600" href="#">Lorem Ipsum</a>
         </div>
-
     </div>
 
-    <div class="container nossa-academia" id="academia">
+
+    <section class="container nossa-academia" id="academia">
 
         <div class="imagem-aluno">
             <img src="img/aluno.jpg" alt="" data-aos="fade-right">
@@ -83,7 +125,7 @@
                 Phasellus tellus libero, elementum vel nibh eget, rutrum.</p>
         </div>
 
-    </div>
+    </section>
 
     <div class="faca-parte">
 
@@ -112,7 +154,8 @@
 
     </div>
 
-    <div class="planos" id="planos">
+    
+    <section class="planos" id="planos">
         <div class="container">
 
             <h2>Nossos Planos</h2>
@@ -124,9 +167,9 @@
 
 
 
-            <div class="flex-cards">
+            <div class="flex-cards" data-aos="flip-left">
 
-                <div class="card-plano">
+                <article class="card-plano">
                     <h3>Plano Mensal</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Donec porttitor interdum arcu, </p>
@@ -142,9 +185,9 @@
                     </ul>
 
                     <a href="#" class="btn btn-outline btn-block">Lorem Ipsum</a>
-                </div>
+                </article>
 
-                <div class="card-plano card-destaque">
+                <article class="card-plano card-destaque">
                     <h3>Plano Mensal</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Donec porttitor interdum arcu, </p>
@@ -160,9 +203,9 @@
                     </ul>
 
                     <a href="#" class="btn btn-fill btn-block">Lorem Ipsum</a>
-                </div>
+                </article>
 
-                <div class="card-plano">
+                <article class="card-plano">
                     <h3>Plano Mensal</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Donec porttitor interdum arcu, </p>
@@ -178,19 +221,19 @@
                     </ul>
 
                     <a href="#" class="btn btn-outline btn-block">Lorem Ipsum</a>
-                </div>
+                </article>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
 
 
     <div class="container fale-conosco" id="contato">
 
-        <div class="conteudo-form">
+        <div class="conteudo-form" data-aos="zoom-in">
             <h2>Fale com a Hard Core</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac lacinia lorem
                 pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros. </p>
@@ -207,7 +250,7 @@
             </form>
         </div>
 
-        <div class="mapa">
+        <div class="mapa"> 
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.159647416229!2d-43.17867878540055!3d-22.907481643653952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f606640bb73%3A0x1ef710745c1fc7cc!2sAv.%20Rio%20Branco%2C%20185%20-%20Centro%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020040-007!5e0!3m2!1spt-BR!2sbr!4v1674831364892!5m2!1spt-BR!2sbr"
                 width="558" height="500" style="border:0;" allowfullscreen="" loading="lazy"
@@ -216,7 +259,7 @@
 
     </div>
 
-    <div class="container">
+    <footer class="container">
 
         <div class="footer">
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac erat tincidunt, feugiat magna sit
@@ -232,20 +275,23 @@
 
         </div>
 
-    </div>
+    </footer>
 
 
- 
-    <script src="js/script.js"></script>            <!-- Ligação entre HTML e JS. Sempre é colocado no final -->
 
-    <script src="js/aos.js"></script>           <!--CSS do site https://michalsnik.github.io/aos/ para ANIMAÇÃO-->
+    <script src="js/script.js"></script> <!-- Ligação entre HTML e JS. Sempre é colocado no final -->
+
+    <script src="js/aos.js"></script> <!--CSS do site https://michalsnik.github.io/aos/ para ANIMAÇÃO-->
 
     <script>
         AOS.init({
-            offset: 60,             /* Aparecer mais rápido ou mais lento algumas animações, retiro do padrão.*/
+            offset: -500,             /* Aparecer mais rápido ou mais lento algumas animações, retiro do padrão.*/
             once: true              /* Não faze mais a animação quando rolar a página de novo*/
         });
     </script>
+
+
+   
 
 </body>
 
